@@ -1,6 +1,6 @@
 ### conda activate trafficvio 
 
-
+----------------------------------------------------------------------------------------
 # Project Setup and GitHub Configuration
 
 ## 1. Generate SSH Key (if not already generated)
@@ -15,6 +15,11 @@ ssh-keygen -t rsa -b 4096 -C "kushals1992003@gmail.com"
 eval "$(ssh-agent -s)"
 ssh-add ~/.ssh/id_rsa
 ```
+output
+``` output
+Agent pid 2032
+Identity added: /c/Users/Kushal S/.ssh/id_rsa (kushals1992003@gmail.com)
+```
 
 ## 3. Add SSH Key to GitHub
 1. Copy the SSH key to the clipboard:
@@ -24,6 +29,29 @@ ssh-add ~/.ssh/id_rsa
 2. Go to **GitHub > Settings > SSH and GPG keys**.
 3. Click **New SSH Key**, paste the copied key, and click **Add SSH Key**.
 
+### 4.  Step 1: Copy Your SSH Public Key
+
+Kushal S@LAPTOP-NHLN8C0P MINGW64 ~/traffic rules demo (master)
+```git bash
+$ cat ~/.ssh/id_rsa.pub
+```
+
+### This will print your SSH key in the terminal. It looks something like this:
+
+``` output
+ssh-rsa 
+AAAAB3NzaC1yc2EAAAADAQABAAACAQDdJ7x4IXWngs/xSy8eC11E8ABfAnQXOe0GYXB2aSYqno6+PIYjqpFyfQkN5F1js5qHcsjWJDKqWV3yj/+q9m1Mh4fDt7swHBR9tn+wUXo+TqYK4zPuphTUl7Ob+e7T65jzF7Taq95WNswhGE1jMpIyv1GDc6l93+vI34ZnBZnbBEiPB8PM30zkOiwPwjDj0nZjnRkxlI4jOcHzkVppjGQjc4F7GSRRDYV5K42NwA8FUBbLIoZZ7nNJkge4Ded8W1lPWqw3yad61zaJSyhDOAqRpN6EIXycMsiNGZGZ7n2OuX+gTcuNBGBh/iD35Fa3Fky/9qaX+F3o+4dZdqecZRPi8lD+0FPpkU13xBIj9J22WMkQP0BAFwlprax+smdaHp9cT9bHdFmYopDQsrpLWQpethD/hsC4h7K5T0NuBgz+Sg2/YpMP+t5Vn5X9k0p0o90jkA+mQRACBbC3QZZjWB7+nckhp5cS1Grzwa1+EznZvppYntX6dBs+2gjZrKFSn94fRyQf2pZ/+7+73WATRgtxU1EAQ9jbeSlOVUM7fO/Rc5G7hfqF3tY/Sp3hQE0TBP+DeXm7+C2B6hK+mE4HPv3hluxGkEHImb+y+3+EelHDZEO5f0oaFrHVvlO+Kc7wYRTZjYD9Zkl9lZDDQ38bX/oTeoT9k4kg6NUXSTFijWM0JQ== kushals1992003@gmail.com
+```
+
+### Step 2: Add the SSH Key to GitHub
+Go to GitHub → SSH and GPG keys.
+Click "New SSH Key".
+Title: Give it a name (e.g., "Laptop SSH Key").
+Key Type: Select Authentication Key.
+Paste the copied SSH key into the "Key" field.
+Click "Add SSH Key".
+
+
 ## 4. Verify SSH Connection
 ```sh
 ssh -T git@github.com
@@ -31,16 +59,6 @@ ssh -T git@github.com
 Expected output:
 ```sh
 Hi Kushal19903! You've successfully authenticated, but GitHub does not provide shell access.
-```
-
-## 5. Clone the Repository
-```sh
-git clone git@github.com:Kushal19903/your-repository-name.git
-```
-
-## 6. Navigate to Project Directory
-```sh
-cd your-repository-name
 ```
 
 ## 7. Track and Commit Changes
@@ -56,6 +74,8 @@ git push origin master
 
 ## Notes
 - Ensure your **SSH key is added to GitHub** before cloning
+
+----------------------------------------------------------------------------------------
 
 ### Comprehensive Explanation of Traffic Violation Detection System
 
