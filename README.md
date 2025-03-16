@@ -1,5 +1,62 @@
 ### conda activate trafficvio 
 
+
+# Project Setup and GitHub Configuration
+
+## 1. Generate SSH Key (if not already generated)
+```sh
+ssh-keygen -t rsa -b 4096 -C "kushals1992003@gmail.com"
+```
+- Press **Enter** to save it in the default location (`~/.ssh/id_rsa`).
+- Set a passphrase if desired (or press Enter to leave it empty).
+
+## 2. Start SSH Agent and Add Key
+```sh
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_rsa
+```
+
+## 3. Add SSH Key to GitHub
+1. Copy the SSH key to the clipboard:
+   ```sh
+   clip < ~/.ssh/id_rsa.pub
+   ```
+2. Go to **GitHub > Settings > SSH and GPG keys**.
+3. Click **New SSH Key**, paste the copied key, and click **Add SSH Key**.
+
+## 4. Verify SSH Connection
+```sh
+ssh -T git@github.com
+```
+Expected output:
+```sh
+Hi Kushal19903! You've successfully authenticated, but GitHub does not provide shell access.
+```
+
+## 5. Clone the Repository
+```sh
+git clone git@github.com:Kushal19903/your-repository-name.git
+```
+
+## 6. Navigate to Project Directory
+```sh
+cd your-repository-name
+```
+
+## 7. Track and Commit Changes
+```sh
+git add .
+git commit -m "Initial commit with project setup"
+```
+
+## 8. Push Changes to GitHub
+```sh
+git push origin master
+```
+
+## Notes
+- Ensure your **SSH key is added to GitHub** before cloning
+
 ### Comprehensive Explanation of Traffic Violation Detection System
 
 ## 1. Root Directory Files
