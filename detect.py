@@ -29,7 +29,7 @@ from datetime import date
 from datetime import datetime
 import pandas as pd
 import telepot
-bot = telepot.Bot('6255019094:AAGPtAZeyO4Ko8EaFZb3avfHlgTDkKxSIL4')
+bot = telepot.Bot('7985779762:AAFGXTR:7wDgh7J47mkmZj2rV8n7lHsK4CU')
 @torch.no_grad()
 def run(weights=ROOT / 'best.pt',  # model.pt path(s)
         source='0',  # file/dir/URL/glob, 0 for webcam
